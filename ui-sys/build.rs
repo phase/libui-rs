@@ -55,6 +55,7 @@ fn main() {
         if apple {
             cfg.cxxflag("--stdlib=libc++");
         }
+        cfg.define("BUILD_SHARED_LIBS", "OFF");
         dst = cfg.build();
 
         let mut postfix = Path::new("build").join("out");
